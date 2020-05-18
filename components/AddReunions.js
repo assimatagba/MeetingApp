@@ -9,7 +9,7 @@ const { heigh, width } = Dimensions.get('window');
 
 
 export function addReunionDb(sujet,lieu,participants,date){
-    dateTime = date.toGMTString();
+    const dateTime = date.toGMTString();
     firebase.database().ref('/reunion').push({sujet,lieu,participants,dateTime});
   }
 
